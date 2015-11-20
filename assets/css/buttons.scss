@@ -325,22 +325,19 @@
 // button state variables
 
 
-$btn-color: #888; // normal
-$btn-color-hover: #777; // hover
-$btn-color-active: #666; // active
+$btn-color: #333; // normal
+$btn-color-hover: #fff; // hover
+$btn-color-active: #333; // active
 
-$btn-border-color: #888; // normal
-$btn-border-color-hover: red; // hover
-$btn-border-color-active: green; // active
+$btn-border-color: #333; // normal
+$btn-border-color-hover: #333; // hover
+$btn-border-color-active: #555; // active
 
 $btn-background-color: #fff; // normal
-$btn-background-color-hover: #777; // hover
-$btn-background-color-active: #666; // active
+$btn-background-color-hover: #333; // hover
+$btn-background-color-active: #fff; // active
 
-$btn-border-radius: #888; // normal
-$btn-large-border-radius: #888; // normal
-
-
+.octicon {color: $btn-color;}
 
 
 html {
@@ -368,7 +365,7 @@ a:focus {
     vertical-align: middle;
     cursor: pointer;
     background: $btn-background-color;
-    border: 1px solid #d5d5d5;
+    border: 1px solid $btn-border-color;
     border-radius: 3px;
 }
 .button {
@@ -380,13 +377,12 @@ a:focus {
     background-color: $btn-background-color-hover;
 }
 .button:active {
-    background-color: #dcdcdc;
+    background-color: $btn-background-color-active;
     background-image: none;
-    border-color: #b5b5b5;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15);
+    border-color: $btn-border-color-active;
 }
 .button:focus {
-    border-color: #51a7e8;
+    border-color: $btn-border-color-active;
 }
 .button i, .button span {
     display: inline-block;
@@ -409,7 +405,7 @@ a:focus {
     margin-left: 5px;
 }
 .count:hover {
-    color: #4183c4;
+    color: $btn-color-hover;
 }
 .count:focus {
     border-color: #a5a5a5;
@@ -435,7 +431,7 @@ a:focus {
 }
 .count b {
     margin-right: 0;
-    border-color: transparent #d5d5d5 transparent transparent;
+    border-color: transparent $btn-color transparent transparent;
 }
 .count i {
     margin-right: -1px;
